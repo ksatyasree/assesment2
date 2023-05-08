@@ -1,0 +1,41 @@
+pipeline {
+    agent none
+    stages {
+        stage('develop') {
+            steps {
+                script {
+                    echo "develop the application..."
+                }
+            }
+        }
+        stage('versioncontrol') {
+            steps {
+                script {
+                    echo "saving  the application in bitbucket.."
+                }
+            }
+        }
+        stage('automation') {
+            steps {
+                script {
+                    echo "automating the application"
+                }
+            }
+        }
+        stage('deploy') {
+            steps {
+                script {
+                    echo "deploying the application"
+                }
+            }
+        }
+        stage('monitor') {
+            steps {
+                script {
+                    echo "monitoring the application"
+                }
+            }
+        }
+        
+    }
+}
